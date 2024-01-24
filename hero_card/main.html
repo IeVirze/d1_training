@@ -1,0 +1,99 @@
+<!-- Nosaka faila tipu, var būt !DOCTYPE html vai !DOCTYPE xhtml, obligāti nepieciešama rinda-->
+<!DOCTYPE html>
+<html> <!-- Atver html tagu-->
+
+<head> <!-- Atver head tagu-->
+    <meta charset="UTF-8">
+    <!-- Nosaka kāda simbolu kopa tiek izmantota teksta attēlošanai https://www.w3schools.com/html/html_charset.asp un https://www.iana.org/assignments/character-sets/character-sets.xhtml-->
+    <title>Varoņa karte</title> <!-- Cilnes nosaukums pārlūkā-->
+    <style>
+        /*Elements lapas vidū*/
+        html,
+        body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            background-color: rgb(59, 59, 59);
+            /* visas lapas fona krāsa */
+        }
+
+        /*Elements lapas vidū --- END -- */
+
+        /*attēla formatējums*/
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        /*Card elementa formatējums*/
+        .bg-card {
+            background-image: url(bg.jpg);
+            /*Fona attēls*/
+            background-size: cover;
+            padding: 40px;
+            text-align: center;
+            border-radius: 5%;
+            color: rgb(0, 0, 0);
+            /*teksta krāsa*/
+            max-width: 400px;
+
+        }
+
+        .abilities img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /*neaizzīmēts saraksts, kas šoreiz ir izmantotos ikonu sarindošanai*/
+        li {
+            display: inline;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--Uzdevums: Izmantojot CSS un HTML izveido video spēles varoņa iepazīšanās karti-->
+    <div class="bg-card">
+        <!-- Varoņa attēls -->
+        <img src="character.png" alt="profila attēls">
+        <!-- Varoņa kartes teksts -->
+        <h1>Larre Concorde Niala</h1>
+        <h3>Human/Elf</h3>
+        <p>Excellent archer with the ability to spot targets from 15km away and successfully hunt the prey from 10km
+            away, great endurance, agility and the feminine charm that will help to avoid problems with male
+            counterparts on 80% of the cases.</p>
+        <!-- Tukšas rindas tags  -->
+        <br />
+        <!-- Nepārtrauktas līnijas tags-->
+        <hr>
+        <br />
+        <div class="abilities">
+            <!-- Klikšķināmas ikonas, kas aizved uz konkrētu sociālo tīklu/mājaslapu-->
+            <ul>
+                <li><a href="https://www.facebook.com"><img src="images/icons8-facebook-64.png"></a></li>
+                <li><a href="https://www.youtube.com"><img src="images/icons8-play-button-circled-64.png"></a></li>
+                <li><a href="https://www.reddit.com"><img src="images/icons8-reddit-64.png"></a></li>
+                <li><a href="https://www.twitter.com"><img src="images/icons8-twitter-circled-64.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
