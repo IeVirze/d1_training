@@ -5,6 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saraksti</title>
+    <style>
+        /*šeit ir faila CSS*/
+        .container {
+            display: grid;
+        }
+
+        .nav {
+            background-color: bisque;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .nav-item {
+            float: left;
+            padding: 10px;
+        }
+
+        .content {
+            text-align: center;
+            background-color: aquamarine;
+        }
+
+        ol {
+            display: inline-block;
+            text-align: center;
+            background-color: chartreuse;
+        }
+
+        h1 {
+            background-color: coral;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,16 +47,16 @@
         <div class="nav">
             <!--Neaizzīmēts saraksts-->
             <ul>
-                <li>Pirmais</li>
-                <li>Otrais</li>
+                <li class="nav-item">Pirmais</li>
+                <li class="nav-item">Otrais</li>
             </ul>
         </div>
         <div class="content">
             <h1>Manas mīļākās krāsas</h1>
             <!-- Aizzīmēts saraksts -->
             <ol>
-                <li>Sarkana</li>
-                <li>Zaļa</li>
+                <li class="content-item">Sarkana</li>
+                <li class="content-item">Zaļa</li>
             </ol>
 
         </div>
