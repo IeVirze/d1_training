@@ -1,0 +1,51 @@
+/*This is a comment*/
+
+/*Pre-set general styles and center the traffic light*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a9877;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+
+/*Traffic light background and shadow*/
+.traffic-light {
+    position: relative;
+    background: #222;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(18, 18, 18, 0.41);
+}
+
+/*Traffic light colors*/
+.red, .green {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #393636;
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*Change color on hover*/
+
+.red:hover {
+    background-color: red;
+    box-shadow: 0 0 40px #f00;
+    z-index: 1;
+
+} 
+
+.green:hover {
+    background-color: rgb(25, 194, 25);
+    box-shadow: 0 0 40px #0d0;
+    z-index: 1;
+}

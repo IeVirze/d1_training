@@ -1,0 +1,128 @@
+/*This is a comment*/
+
+/*Pre-set general styles and center the traffic light*/
+body {
+    margin: 0;
+    padding: 0;
+    background: url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    align-items:center;
+    justify-content:space-evenly;
+    display: flex;
+    height: 100vh;
+}
+
+/*Traffic light background and shadow*/
+.traffic-light {
+    position: relative;
+    background: #222;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(18, 18, 18, 0.41);
+}
+
+/*Traffic light colors*/
+.red, .yellow, .green {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #393636;
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+}
+
+
+
+/*Change color on for car traffic light*/
+
+#drive .red {
+    animation-name: redLight;
+}
+
+#drive .yellow {
+    animation-name: yellowLight;
+}
+
+#drive .green {
+    animation-name: greenLight;
+}
+
+@keyframes redLight {
+    0% {
+        background-color: red;
+        box-shadow: 0 0 40px #f00;
+    z-index: 1;
+    }
+    35% {
+        background-color: #393636;
+        box-shadow: none;
+        z-index: 0;
+    }
+
+} 
+
+@keyframes yellowLight {
+    80% {
+        background-color: yellow;
+        box-shadow: 0 0 40px #ff0;
+        z-index: 1;
+    }
+}
+
+@keyframes greenLight {
+    35% {
+        background-color: rgb(25, 194, 25);
+        box-shadow: 0 0 40px #0d0;
+        z-index: 1;
+    }
+    80% {
+        background-color: #393636;
+        box-shadow: none;
+        z-index: 0;
+    }
+}
+
+/*Change color on for pedestrian traffic light*/
+
+#walk .red {
+    animation-name: redLight2;
+}
+
+#walk .green {
+    animation-name: greenLight2;
+}   
+
+@keyframes redLight2 {
+    35% {
+        background-color: red;
+        box-shadow: 0 0 40px #f00;
+        z-index: 1;
+    }
+    80% {
+        background-color: #393636;
+        box-shadow: none;
+        z-index: 0;
+    }
+}
+
+
+@keyframes greenLight2 {
+    0% {
+        background-color: rgb(25, 194, 25);
+        box-shadow: 0 0 40px #0d0;
+        z-index: 1;
+    }
+    35% {
+        background-color: #393636;
+        box-shadow: none;
+        z-index: 0;
+    }
+}
+
