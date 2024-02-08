@@ -1,19 +1,27 @@
 /* Fona krāsa */
 body {
+    margin: 0;
+    padding: 0;
     background-color: rgb(238, 196, 196);
 }
 
 #container {
-    display: grid;
+    display: flex;
 }
 
 #noteikumi {
-    display: inline-block;
-    margin:auto;
+    float: right;
+    height: 100vh;
+}
+
+table {
+    height: 100vh;
+    overflow: hidden;
 }
 
 table, tr, th,td {
     text-align: center;
     /*piešķir vērtības tabulas malām*/
     border: 1px solid black;
+
 }
