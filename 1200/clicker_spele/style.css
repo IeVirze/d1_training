@@ -1,5 +1,11 @@
 /* Nomainam fona krāsu */
 
 body {
-    background: rebeccapurple;
+    background: rgb(226, 197, 254);
+}
+
+/* Malu noformējums tabulai */
+
+table, tr, th, td {
+    border: 1px solid black
 }
