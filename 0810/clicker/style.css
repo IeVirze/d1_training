@@ -3,11 +3,17 @@ body {
     background-color: rgb(238, 196, 196);
 }
 
-div {
+#container {
     display: grid;
+}
+
+#noteikumi {
+    display: inline-block;
+    margin:auto;
 }
 
 table, tr, th,td {
     text-align: center;
+    /*piešķir vērtības tabulas malām*/
     border: 1px solid black;
 }
