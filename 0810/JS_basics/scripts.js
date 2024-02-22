@@ -1,0 +1,1 @@
+document.getElementById("outside-file").innerHTML = 'Hello World from body!';
