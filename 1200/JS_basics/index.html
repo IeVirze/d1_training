@@ -15,14 +15,17 @@
     <!-- JavaScript galvenē -->
     <script>
         //Šis ir komentārs JS valodā
-
-        
-        document.getElementById("third").innerHTML = 'JavaScript galvenē!';
+        // JavaScript funkcija - mācīsies par to kārtīgāk nākamajās nodarbībās
+        //funkcija darbojas tikai tad kad funkciju izsauc
+    function text() {     
+        document.getElementById("third").innerHTML = 'JavaScript galvenē!';}
 
     </script>
 
 </head>
 <body>
+    <!-- Vienkārša HTML poga -->
+    <button onclick="text()">Click me!</button>
     <div id="first"></div>
     <div id="second"></div>
     <div id="third"></div>
