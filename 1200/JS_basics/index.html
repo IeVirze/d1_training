@@ -19,12 +19,16 @@
         //funkcija darbojas tikai tad kad funkciju izsauc
     function text() {     
         document.getElementById("third").innerHTML = 'JavaScript galvenē!';}
+    
+    function image() {     
+        document.getElementById("image").innerHTML = 'Hellloooo kas notiek?';}
 
     </script>
 
 </head>
 <body>
     <!-- Vienkārša HTML poga -->
+    <div id="image" onclick="image()"><img height="100px" width="150px" src="4057631.jpg"></div>
     <button onclick="text()">Click me!</button>
     <div id="first"></div>
     <div id="second"></div>
