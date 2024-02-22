@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. stunda JavaScript</title>
+    <!-- Web lapas elementi ielādējas pa koda rindiņām secīgi sākot no 1.rindiņas-->
+    <!-- Ja galvenē tiek izmantots JavaScipt kods ar getElementby... tas nestrādās, jo elementi vēl nav ielādējušies, kad JavaScript tiek ielādēts -->
+    <!-- tāpēc galvenē labāk strādā koda elementi (visbiežāk funkcijas), kas tiek izsaukti uz konkrētu darbību-->
+
+    <!-- Pievienot JavaScript galvenē-->
+    <script>
+        //Javascript kods
+        function clicks() {
+            document.getElementById("head").innerHTML = "Hello World from the head!";
+        }
+    </script>
+
+    <!-- Pievienot JavaScript failu/datni galvenē-->
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <div id="outter" onclick="floral()"><img src="floral.jpg"></div>
+    <button onclick="clicks()">Click me!</button>
+    <div id="head"></div>
+    <div id="body"></div>
+    <div id="bodyOutter"></div>
+    
+    <!-- Pievienot JavaScript ķermenī -->
+    <script>
+        //Javascript kods
+        document.getElementById("body").innerHTML = "Hello World from the body!";
+    </script>
+
+    <!-- Pievienot JavaScript failu/datni ķermenī -->
+    <script type="text/javascript" src="mmain.js"></script>
+</body>
+</html>

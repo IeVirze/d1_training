@@ -1,0 +1,26 @@
+body {
+    padding-top: 30px;
+    font-family: Arial;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    display:grid;
+
+}                                           
+
+p {
+    font-size: 20px;
+    color: white;
+    display: block;
+    margin: 5px;
+}
+
+
+
+#numbers {
+    margin: auto;
+    text-align:center;
+    font-size: 100px;
+    width:200px;
+    height:60px;    
+}
