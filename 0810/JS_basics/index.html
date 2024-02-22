@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS basics</title>
+
+    <!-- CSS galvenē-->
+    <style>
+        body {
+            background-color: bisque;
+        }
+    </style>
      
     <!-- Javascript galvenē -->
     <script>
+        //Šī ir funkcija, kuru mēs labāk apgūsim nākamajās nodarbībās
+        function click() {
+            document.getElementById("head").innerHTML = 'Hello World!';
+        }
+
+
+document.getElementById("test").onclick = 'OOOOps!';
         
+
     </script>
 </head>
 <body>
+    <button id="test">Hello World!</button>
+    <button onclick="getElementById('head').innerHTML = 'Hello World! Mo?';" > Click me!</button>
     <div id="head"></div>
     <div id="body"></div>
     <div id="outside-file"></div>
@@ -21,7 +38,13 @@
     <script>
         //Šis ir JavaScript
         //.getElementById() - Javascript metode
+        //Javascript ķermenī, pirms noslēdzoša body taga - ielādējas pēdējais, un var piekļūt jebkuram lapas elementam, kur'sir ielādējies pirms tam
         document.getElementById("body").innerHTML = 'Hello World!';
+        document.getElementById("myBtn").onclick = displayDate;
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
     </script>
 </body>
 </html>
