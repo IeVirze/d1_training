@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sveiciens</title>
+</head>
+<body>
+    <!-- Kā mēs bildi padaram klikšķināmu? -->
+    <img src="4057631.jpg" alt="Attēls" width="300px" onclick="skaitsViens()">
+
+    <!-- Kā mēs h1 padaram neklikšķānumu? -->
+    <h1 id="greetings" >Hello!</h1>
+
+    <!-- Ievietojam JS html ķermenī -->
+    <script>
+        // Izveidojam mainīgo
+        let number = 0;
+
+        // Izveidojam funkciju
+        function skaitsViens() {
+            number += 5; 
+             //rezultātu izvadam h1 tagā ar id "greetings"
+            document.getElementById("greetings").innerHTML = number;
+        }
+    </script>
+</body>
+</html>

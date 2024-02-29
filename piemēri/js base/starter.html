@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="clickMe" onclick="clickChange()">0</h1>
+    
+    <!-- Javascript ķermenī-->
+    <script>
+        // mainīgais clickCount, kurš sākumā ir 0
+        let clickCount = 0;
+
+        // funkcija, kas tiek izsaukta, kad uzspiež uz h1 elementa
+        function clickChange() {
+            // palielina clickCount par 1, kad funkcija tiek izsaukta
+            clickCount++;
+            // izvada tekstu, kurā ir clickCount vērtība, kad funkcija tiek izsaukta
+            let num = document.getElementById("clickMe");
+            num.innerHTML = "You clicked me " + clickCount + " times";        
+        
+        }
+
+
+    </script>
+</body>
+</html>

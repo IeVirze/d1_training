@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Zebra</title>
+    <style>
+        #container {
+            text-align: center;
+            display: grid;
+        }
+        #zebra {
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        #zebra img {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div id="zebra" onclick="clickChange()" >
+        <img src="zebra.png" alt="zebra">
+    </div>
+    <div><h1 id="count">0</h1></div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+
+        function clickChange() {
+            clickCount++;
+            let num = document.getElementById("count");
+            num.innerHTML = "You clicked the zebra " + clickCount + " times";
+        }
+    </script>
+</body>
+</html>
