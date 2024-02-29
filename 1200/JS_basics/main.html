@@ -20,9 +20,14 @@
         //JS const mainīgais, kas netiks mainīts
         //const konstante = 5;
 
-        let number = 20
+        let number = 0;
         //JS funkcija
-        document.getElementById("countMe").innerHTML = 'Hello World!' + number;
+        function clicked() {
+            number += 1;
+            document.getElementById("countMe").innerHTML = number;
+        }
+
+        
 
 
 
