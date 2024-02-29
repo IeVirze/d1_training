@@ -29,6 +29,15 @@
         function clicked() {
             number += 1;
             document.getElementById("countMe").innerHTML = number;
+
+            if (number > 10) {
+                number +=10;
+                document.getElementById("countMe").innerHTML = number;
+            }
+            if (number > 100) {
+                number +=400;
+                document.getElementById("countMe").innerHTML = number;
+            }
         }
 
         // Vērtību reset pogas funkcija
@@ -37,7 +46,7 @@
             document.getElementById("countMe").innerHTML = number;
         }
 
-        
+
 
     </script>
 </body>
