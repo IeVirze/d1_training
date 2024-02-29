@@ -10,6 +10,10 @@
     <div id="clickMe" onclick="clicked()"><img src="zebra.png" width="300px"></div>
     <div id="countMe"></div>
 
+    <!-- Reset poga -->
+    <button onclick="reset()">Reset</button>
+
+
     <!-- Uzrakstam skriptu, kas darbosies, kad lapu ielādēs -->
     <script>
         //Javascript mainīgie
@@ -26,6 +30,14 @@
             number += 1;
             document.getElementById("countMe").innerHTML = number;
         }
+
+        // Vērtību reset pogas funkcija
+        function reset() {
+            number = 0;
+            document.getElementById("countMe").innerHTML = number;
+        }
+
+        
 
     </script>
 </body>
