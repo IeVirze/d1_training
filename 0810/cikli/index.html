@@ -8,17 +8,27 @@
     <script>
         //For loop jeb cikls HTML galvenē
 
-        for (let number = 1; number <= 10; number++) {
+        for (let number = 1; number <= 5; number++) {
 
             //Deklarējam mainīgo ar nosaukumu result, kurš nemainās.
             const result = 5 * number;
+            //backticks jeb atpakaļvērstajām pēdiņām
             document.write(`<p> 5 * ${number} = ${result} </p>`);
+
+            //ar parastajām dubultpēdiņām
+            //document.write("<p> 5 * " + number + " = " + result + " </p>")
+            //ar parasto vienu pēdiņu
+            //document.write('<p> 5 * ' + number + ' = ' + result + ' </p>')
         }
+
+        document.write(`<button> Click me! </button>`)
 
     </script>
 </head>
 <body>
     <div id="multiplication"> </div>
+
+    <h1>HTML body</h1>
 
 
     <!-- 
