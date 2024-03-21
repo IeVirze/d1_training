@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reiznāšanas tabula</title>
+    <link rel="stylesheet" href="style.css">
 
     <script>
+        //Funkcija, kas izveido tabulas galvenē linkotu css failu
+        function writeHead() {
+            let head = document.getElementsByTagName('head')[0];
 
+            //Izveidojam tagu link
+            let link = document.createElement('link');
+
+            //Atribūti link tagam 
+            link.rel = 'stylesheet';
+            link.href = 'style.css';
+
+            head.appendChild(link);
+        }
 
         function makeTable(){  
             let value = document.getElementById("inputValue").value;
             //Mini uzdevums: izmantojot document.write izveido pogu ar atribūtu onClick kas izsauc funkciju ar nosaukumu reloadPage()
             document.write("<button onClick='reloadPage()'>Izveidot tabulu no jauna!</button>");
 
-            document.write("<table>")
+            document.write("<table >")
         //Seit sākās JS
         // For cikli var būt vairāki vienlaicīgi
 
@@ -32,19 +45,18 @@
             }
 
             document.write("</table>")
+
+        writeHead();
     }
 
     //Funkcija lapas pārlādēšanai
     function reloadPage() {
         location.reload();
     }
-
-
-
     </script>
 </head>
 <body>
-    <h1>Taisam reizrēķina tabulu!</h1>
+    <h1 style="color:brown">Taisam reizrēķina tabulu!</h1>
     <!-- Uzrakstīt koda bloku, kas satur input lauka tagu un pogas tagu pāri ar attribūtu onClick un funkcijas nosaukumu (neizmirstam pogai piešķirt nosaukumu) -->
     <div>
         <input id="inputValue" placeholder="Ievadi skaitli reizrēķinam ... ">
