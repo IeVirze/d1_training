@@ -9,16 +9,18 @@
 
 
         function makeTable(){  
-           let value = document.getElementById("inputValue").value;
-           
+            let value = document.getElementById("inputValue").value;
+            //Mini uzdevums: izmantojot document.write izveido pogu ar atribūtu onClick kas izsauc funkciju ar nosaukumu reloadPage()
+            document.write("<button onClick='reloadPage()'>Izveidot tabulu no jauna!</button>")
+
             document.write("<table>")
         //Seit sākās JS
         // For cikli var būt vairāki vienlaicīgi
 
-            for (let number = 1; number <= 10; number++) {
+            for (let number = 1; number <= value; number++) {
                 document.write("<tr>")
 
-                    for (let i = 1; i <= 10; i++) {
+                    for (let i = 1; i <= value; i++) {
                         const result = number * i;
 
                         document.write("<td>" + result + "</td>")
@@ -31,6 +33,11 @@
 
             document.write("</table>")
     }
+
+
+
+
+
     </script>
 </head>
 <body>
