@@ -6,29 +6,39 @@
     <title>Reiznāšanas tabula</title>
 
     <script>
-        document.write("<table>")
+
+
+        function makeTable(){  
+           let value = document.getElementById("inputValue").value;
+           
+            document.write("<table>")
         //Seit sākās JS
         // For cikli var būt vairāki vienlaicīgi
 
-        for (let number = 1; number <= 10; number++) {
-            document.write("<tr>")
+            for (let number = 1; number <= 10; number++) {
+                document.write("<tr>")
 
-                for (let i = 1; i <= 10; i++) {
-                    const result = number * i;
+                    for (let i = 1; i <= 10; i++) {
+                        const result = number * i;
 
-                    document.write("<td>" + result + "</td>")
-                }
+                        document.write("<td>" + result + "</td>")
+                    }
 
 
-            document.write("</tr>")
+                document.write("</tr>")
 
-        }
+            }
 
-        document.write("</table>")
-
+            document.write("</table>")
+    }
     </script>
 </head>
 <body>
-    
+    <h1>Taisam reizrēķina tabulu!</h1>
+    <!-- Uzrakstīt koda bloku, kas satur input lauka tagu un pogas tagu pāri ar attribūtu onClick un funkcijas nosaukumu (neizmirstam pogai piešķirt nosaukumu) -->
+    <div>
+        <input id="inputValue" placeholder="Ievadi skaitli reizrēķinam ... ">
+        <button onClick="makeTable()">Izveidot tabulu!</button>
+    </div>
 </body>
 </html>
