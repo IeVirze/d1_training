@@ -4,41 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reizināšanas tabula</title>
+    <link rel="stylesheet" href="style.css">
 
     <script>
-        //For loop jeb cikls HTML galvenē
+        //Šeit varam pievienot style.css ar JS
 
-        for (let number = 1; number <= 5; number++) {
 
-            //Deklarējam mainīgo ar nosaukumu result, kurš nemainās.
-            const result = 5 * number;
-            //backticks jeb atpakaļvērstajām pēdiņām
-            document.write(`<p> 5 * ${number} = ${result} </p>`);
 
-            //ar parastajām dubultpēdiņām
-            //document.write("<p> 5 * " + number + " = " + result + " </p>")
-            //ar parasto vienu pēdiņu
-            //document.write('<p> 5 * ' + number + ' = ' + result + ' </p>')
+        // Funkcija pirms for loop tiek atvērta un aizvērta ar {} iekavām
+
+        function makeTable(){
+            let value = document.getElementById("inputValue").value;
+
+            document.write(`<button onClick="reloadPage()"> Click me! </button>`)
+
+            //Šeit sākas tabula
+            document.write("<table>")
+
+                for (let number = 1; number <= value; number++) {
+                    document.write("<tr>");
+
+                        //Izveidojam otru for loop lai izveidotu reizināšanas tabulas kolonnas
+                        for (let i = 1; i <= value; i++) {
+                            const result = number * i;
+
+                            document.write("<td>" + result + "</td>");
+                        }
+                    
+                    document.write("</tr>");
+                }
+            document.write("</table>");
+        
+        addStyle();
         }
-
-        document.write(`<button> Click me! </button>`)
+         //JS var būt vairākas funkcijas jo tie ir atkārti izmantojami koda fragmenti
+        function reloadPage(){
+            location.reload();
+        }
 
     </script>
 </head>
 <body>
-    <div id="multiplication"> </div>
-
-    <h1>HTML body</h1>
-
-
-    <!-- 
-     <script> 
-    //For loop jeb for cikls
-
-    for ( let number = 1; number <= 1000; number++) {
-        document.getElementById("multiplication").innerHTML += `<p> 5 * ${number} = ${5 * number} </p>`;
-    }
-    
-    </script>-->
+    <h1>Reizināšanas tabula</h1>
+    <!-- Izveidojam 1 input field un 1 pogu ar onClick atribūtu, kuri abi atrodas koda blokā jeb starp 2 div tagiem -->
+    <div> 
+        <input id="inputValue" placeholder="Ievadi skaitli">
+        <button onClick="makeTable()">Izveidot reizrēķinu!</button>
+    </div>
 </body>
 </html>
