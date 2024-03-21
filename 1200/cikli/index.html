@@ -11,7 +11,7 @@
         function makeTable(){  
             let value = document.getElementById("inputValue").value;
             //Mini uzdevums: izmantojot document.write izveido pogu ar atribūtu onClick kas izsauc funkciju ar nosaukumu reloadPage()
-            document.write("<button onClick='reloadPage()'>Izveidot tabulu no jauna!</button>")
+            document.write("<button onClick='reloadPage()'>Izveidot tabulu no jauna!</button>");
 
             document.write("<table>")
         //Seit sākās JS
@@ -34,7 +34,10 @@
             document.write("</table>")
     }
 
-
+    //Funkcija lapas pārlādēšanai
+    function reloadPage() {
+        location.reload();
+    }
 
 
 
