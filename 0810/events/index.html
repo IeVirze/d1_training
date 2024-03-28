@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faili</title>
+</head>
+<body>
+    <!-- CSS stils izmantojot JS style.color = 'red' -->
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Šeit notiks augšupielade</h1>  
+    
+    <!--Pieņemt user input ar HTML tagu -->
+
+    <div class="container" id="upload">
+        <!-- Atveram formu kurā varam pieņemt user input -->
+        <form>
+            <input type="file" id="file" onchange="addFile(event)" value="fileupload">
+        </form>
+    </div>
+</body>
+</html>
