@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faili</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Uzrakstam virsrakstu un pielitojam virsrakstam atribūtu lai maintu tā īpašības -->
+    <h1 onmouseover="style.color='green'" onmouseout="style.color='grey'" >Šeit būs failu augšupielāde</h1>
+    
+    <!-- Failu augšupielāde kā user input -->
+    <div id="upload">
+        <form>
+            <input type="file" id="file" value="fileupload" onchange="loadFile(event)"> 
+        </form>
+    </div>
+</body>
+</html>
