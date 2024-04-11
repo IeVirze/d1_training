@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV lasītājs</title>
+    <script>
+        //Rakstam JS kodu, kas atvērs un izlasīs csv failu
+        function openFile(event){
+            //Definējam 2 mainīgos - failu un tā lasītāju
+            let input = event.target;
+            let reader = new FileReader();
+
+            //Kad fails ir ielādēts, tad tiek izsaukta šī funkcija
+            reader.onload = function(){
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Input lauks -->
+    <form>
+        <input type="file" onchange="openFile(event)" accept=".csv">
+    </form>
+    <!-- Koda bloks, kur parādīs rezultātu -->
+    <div id="upload">-----</div>
+    
+</body>
+</html>
