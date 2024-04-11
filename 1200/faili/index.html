@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faili</title>
+    <!-- Jāpievieno CSS html dokumentā-->
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        //Šeit rakstam JS kodu 
+        //Funkcija, kas tiek isaukta, kad tiek izvēlēts fails
+        function addFile(event) {
+            //Definēsim mainīgo, kurš piekļūst img tagam ar id output
+            let bilde = document.getElementById("output");
+            //Ar JS izveidojam attēla src parametru, kas satur faila adresi (attēla adresi)
+            //.createObjectURL() metode, lai izveidotu URL objektam - failam
+            bilde.src = URL.createObjectURL(event.target.files[0])
+        } 
+
+    </script>
 </head>
 <body>
-    <!-- Uzrakstam virsrakstu un pielitojam virsrakstam atribūtu lai maintu tā īpašības -->
-    <h1 onmouseover="style.color='green'" onmouseout="style.color='grey'" >Šeit būs failu augšupielāde</h1>
-    
-    <!-- Failu augšupielāde kā user input -->
-    <div id="upload">
-        <form>
-            <input type="file" id="file" value="fileupload" onchange="loadFile(event)"> 
-        </form>
+
+    <h2> Augšupielādē failu šeit </h2>
+
+    <!-- Koda bloks, kurš satur input tagu, lai varētu lapā pievienot failu -->
+
+    <div id="file-upload">
+        
+
+       <!-- Atveram ievades formu -->
+       <form>
+        <!-- Label ievades laukam, kas izpilda to pašu funkciju, bet ir ikona -->
+            <label for="file">
+                <img src="icons8-upload-image-16.png" alt="upload icon" width="60px">
+            </label>
+        <!-- Ievades lauks failu ievadei -->
+            <input id="file" type="file" onchange="addFile(event)">
+       </form> 
+
+       <!-- Attēla priekšskatījums -->
+       <!-- Mēs šajā tagā nerakstam src (Šoreiz)-->
+        <img id="output" width="200px"/>
+
     </div>
 </body>
 </html>

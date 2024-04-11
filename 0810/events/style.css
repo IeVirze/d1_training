@@ -1,0 +1,16 @@
+/* Šeit rakstam CSS kodu */
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #cfe0fc;
+}
+
+h1 {
+    color: rgb(74, 23, 32);
+    font-size: 30px;
+}
+
+input {
+    display: none; /* paslēpjam input elementu */
+}

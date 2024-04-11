@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faili</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Šeit rakstam JS kodu 
+
+        //JS funkcija ar nosaukumu addFile, kas tiek izsaukta, kad tiek izvēlēts fails
+        //Funkcija saņem argumentu event (jeb fails, kas tiek izvēlēts)
+
+        function addFile(event) {
+            // šeit ir JS kods, kas tiek izpildīts, kad funkcija tiek izsaukta
+            let image = document.getElementById('output');
+            image.src =  URL.createObjectURL(event.target.files[0]);
+
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Augšupielādē failu šeit</h1>
+
+    <div class="container">
+        <form>
+            <label for="file"> Šeit augšupielādē failu </label>
+            <input type="file" id="file" onchange="addFile(event)">
+        </form>
+        <!-- img tags bez attēla avota -->
+        <img id="output" width="200px"/>
+
+        <!-- <img src="character.png"> -->
+    </div> 
+</body>
+</html>
