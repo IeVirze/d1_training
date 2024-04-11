@@ -13,12 +13,20 @@
 
             //Kad fails ir ielādēts, tad tiek izsaukta šī funkcija
             reader.onload = function(){
-                
-            }
+                //Definējam jaunu mainīgo ar kuru iegūsim elementu dic pēc id
+                let text = document.getElementById('upload');
+                //Izvadam faila sature
+                let content = reader.result;
+
+                text.innerText = content;
+
+            };
+            reader.readAsText(input.files[0]);
         }
     </script>
 </head>
 <body>
+    <h1> CSV lasītājs </h1>
     <!-- Input lauks -->
     <form>
         <input type="file" onchange="openFile(event)" accept=".csv">
