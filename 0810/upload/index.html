@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSV lasītājs</title>
+    <script>
+        //Šeit būs JS kods
+        function readFile(event) {
+            //šeit rakstam funkciju, kas izlasa .csv failu
+            //Definējam mainīgo, kas saturēs faila saturu
+            let file = event.target;
+            //Definējam mainīgo, kas lasīs .csv failu
+            let reader = new FileReader();
+
+            //Funkcija, kas tiek izsaukta, lai parādītu faila saturu
+            reader.onload = function() {
+              //Definējam mainīgo, kurš var piekļūt div tagam pēc taga id vērtības
+              let content = document.getElementById('result');
+              let text = reader.result;
+              //Parādīsim faila saturu
+              content.innerText = text; 
+              console.log(reader.result); 
+            }
+            //Izlasam failu
+            reader.readAsText(file.files[0]);
+
+        }
+    </script>
+</head>
+<body>
+    <!-- Input field -->
+    <form>
+        <input type="file" onchange="readFile(event)" accept=".csv">
+    </form>
+    <!-- Koda bloks informacijas parādīšanai uz ekrāna -->
+    <div id="result">------</div>
+</body>
+</html>
