@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSV lasītājs</title>
     <style>
-        body{
-            background-color: bisque;
+        td {
+            border: 1px solid #000;
         }
     </style>
     <script>
-        //Rakstam JS kodu, kas atvērs un izlasīs csv failu
+        //Rakstam JS kodu, kas atvērs un izlasīs csv failuS
         function openFile(event){
             //Definējam 2 mainīgos - failu un tā lasītāju
             let input = event.target;
@@ -18,12 +18,6 @@
 
             //Kad fails ir ielādēts, tad tiek izsaukta šī funkcija
             reader.onload = function(){
-                //Definējam jaunu mainīgo ar kuru iegūsim elementu dic pēc id
-                let text = document.getElementById('upload');
-                //Izvadam faila sature
-                let content = reader.result;
-
-                text.innerText = content;
 
             };
             reader.readAsText(input.files[0]);
@@ -36,8 +30,14 @@
     <form>
         <input type="file" onchange="openFile(event)" accept=".csv">
     </form>
-    <!-- Koda bloks, kur parādīs rezultātu -->
-    <div id="upload">-----</div>
+
+    <!-- Tabula, kur tiks ielasītas visas CSV faila vērtības -->
+    <table>
+        <tr>
+            <td id="cell"></td>
+        </tr>
+    </table>
+
     
 </body>
 </html>
