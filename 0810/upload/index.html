@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> CSV lasītājs</title>
+    <link rel="stylesheet" href="style.css">
     <script>
         //Šeit būs JS kods
+        //Funkcija nr 1
         function readFile(event) {
             //šeit rakstam funkciju, kas izlasa .csv failu
             //Definējam mainīgo, kas saturēs faila saturu
@@ -14,26 +16,55 @@
             let reader = new FileReader();
 
             //Funkcija, kas tiek izsaukta, lai parādītu faila saturu
+            //funkcija nr 2
             reader.onload = function() {
-              //Definējam mainīgo, kurš var piekļūt div tagam pēc taga id vērtības
-              let content = document.getElementById('result');
-              let text = reader.result;
-              //Parādīsim faila saturu
-              content.innerText = text; 
-              
+                //Definējam mainīgo, kurš var piekļūt tabulas šūnai pēc tabuls šūnas taga id vērtības
+                let content = document.getElementById("cell");
+                //Papildinam JS ar 3 mainīgajiem, kas piekļūst papildus izveidotājām šūnām
+                let content1 = document.getElementById("cell-1");
+                let content2 = document.getElementById("cell-2");
+                let content3 = document.getElementById("cell-3");
+
+                let text = reader.result;
+
+                //Izsauc jaunu funkciju, kas par parametriem pieņem jau definētos mainīgos
+                displayContent(text, content, content1, content2, content3);
+
             }
             //Izlasam failu
             reader.readAsText(file.files[0]);
-
         }
+        //funkcija nr 3
+        function displayContent(text, content, content1, content2, content3) {
+            //Definēts mainīgais, kas sadala teksta bloku daļās pēc konkrētas pazīmes vai atdalītāja
+            let rows = text.split('\n')
+            //Aizpilda <td> saturu
+            content.innerHTML = rows[0];
+            //Papildus rindas, kas maina jaun0 <td> tagu saturu
+            content1.innerHTML = rows[1];
+            content2.innerHTML = rows[2];
+            content3.innerHTML = rows[3];
+        }
+
     </script>
 </head>
 <body>
+    <h1>CSV lasītājs</h1>
+
     <!-- Input field -->
     <form>
         <input type="file" onchange="readFile(event)" accept=".csv">
     </form>
-    <!-- Koda bloks informacijas parādīšanai uz ekrāna -->
-    <div id="result">------</div>
+    <!-- Tabula kurā tiks ievietota informācija no csv faila -->
+    <table>
+        <tr>
+            <!-- Izveidojam tabulas šūnu ar redzamu robežu -->
+            <td id="cell"></td>
+            <!-- Papildinam tabulu ar vēl 3 rindām -->
+            <td id="cell-1"></td>
+            <td id="cell-2"></td>
+            <td id="cell-3"></td>
+        </tr>
+    </table>
 </body>
 </html>

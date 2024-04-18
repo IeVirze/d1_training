@@ -1,0 +1,13 @@
+table, td {
+    border: 1px solid #072b59;
+}
+
+body { 
+    background-color: rgb(187, 157, 117);
+}
+
+h1 {
+    color:rgb(95, 28, 4);
+    line-height: 40px;
+}
+
