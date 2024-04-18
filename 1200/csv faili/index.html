@@ -11,16 +11,36 @@
     </style>
     <script>
         //Rakstam JS kodu, kas atvērs un izlasīs csv failuS
+        //Funkcija nr.1
         function openFile(event){
             //Definējam 2 mainīgos - failu un tā lasītāju
             let input = event.target;
             let reader = new FileReader();
 
             //Kad fails ir ielādēts, tad tiek izsaukta šī funkcija
+            //Funkcija nr.2
             reader.onload = function(){
+                //Definējam mainīgo, kas var piekļūt tabulas šūnai ar id "cell"
+                let content = document.getElementById("cell");
+                //Definējam mainīgo, kas satur csv faila saturu
+                let text = reader.result;
+
+                //Izsaucam funkciju, kas pieņem 2 parametrus 
+                tableCSV(text, content);
 
             };
             reader.readAsText(input.files[0]);
+        }
+
+        //Funkcija nr.3
+        function tableCSV(csvData, content) {
+            //Funkcija, kas sadala CSV tekstu gabalos, un ielasa tabulā
+
+            //Definējam mainīgo, kas sadala tekstu pēc konkrētas rakstzīmes 
+            let rows = csvData.split('\n');
+
+            content.innerHTML = rows;
+
         }
     </script>
 </head>
