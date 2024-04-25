@@ -21,7 +21,7 @@
             //Funkcija nr.2
             reader.onload = function(){
                 //Definējam mainīgo, kas var piekļūt tabulas šūnai ar id "cell"
-                let content = document.getElementById("cell");
+                let content = document.getElementById("result");
                 //Definējam mainīgo, kas satur csv faila saturu
                 let text = reader.result;
 
@@ -35,13 +35,20 @@
         //Funkcija nr.3
         //Funkcija, kas sadala CSV tekstu gabalos, un ielasa tabulā
         function tableCSV(csvData, content) {
-            
-
             //Definējam mainīgo, kas sadala tekstu pēc konkrētas rakstzīmes 
             let rows = csvData.split('\n');
+            //Tukša tabula
+            content.innerHTML = '';
 
-            content.innerHTML = rows[1];
+            //Izvadam tekstu vai mainīgos konsolē
+            //Jo - mēs vēlamies pārbaudīt vai ir rindas pareizā skaitā sadalītas no CSV teksta
+            console.log("Rindu skaits: " + rows.length)
 
+
+            //For cikls, lai izveidotu tabulas rindas un kolonnas un rezultātu ielasītu tabulas šūnās
+            for (let rinda = 0;  ) {
+                //For cikla saturs ir šeit
+            }
         }
     </script>
 </head>
@@ -53,10 +60,8 @@
     </form>
 
     <!-- Tabula, kur tiks ielasītas visas CSV faila vērtības -->
-    <table>
-        <tr>
-            <td id="cell"></td>
-        </tr>
+    <table id="result">
+        <!-- Automātiski tiks izveidotas tabulas rindas un šūnas -->
     </table>
 </body>
 </html>

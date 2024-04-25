@@ -18,32 +18,44 @@
             //Funkcija, kas tiek izsaukta, lai parādītu faila saturu
             //funkcija nr 2
             reader.onload = function() {
-                //Definējam mainīgo, kurš var piekļūt tabulas šūnai pēc tabuls šūnas taga id vērtības
-                let content = document.getElementById("cell");
-                //Papildinam JS ar 3 mainīgajiem, kas piekļūst papildus izveidotājām šūnām
-                let content1 = document.getElementById("cell-1");
-                let content2 = document.getElementById("cell-2");
-                let content3 = document.getElementById("cell-3");
-
+                //Definējam mainīgo, kurš var piekļūt tabulai
+                let table = document.getElementById('result');
                 let text = reader.result;
-
                 //Izsauc jaunu funkciju, kas par parametriem pieņem jau definētos mainīgos
-                displayContent(text, content, content1, content2, content3);
-
+                displayContent(text, table);
             }
             //Izlasam failu
             reader.readAsText(file.files[0]);
         }
         //funkcija nr 3
-        function displayContent(text, content, content1, content2, content3) {
+        function displayContent(text, table) {
             //Definēts mainīgais, kas sadala teksta bloku daļās pēc konkrētas pazīmes vai atdalītāja
             let rows = text.split('\n')
-            //Aizpilda <td> saturu
-            content.innerHTML = rows[0];
-            //Papildus rindas, kas maina jaun0 <td> tagu saturu
-            content1.innerHTML = rows[1];
-            content2.innerHTML = rows[2];
-            content3.innerHTML = rows[3];
+            //Tukša tabula
+            table.innerHTML = '';
+
+            //Pārbaudam cik ir rindas CSV
+            console.log("Rindu skaits: " + rows.length)
+            //For cikls, lai izveidotu tabulas rindas un kolonnas un ielasītu CSV saturu tajās
+            for (let rinda = 0; rinda < rows.length; rinda++) {
+                //Izveidojam rindas tabulā
+                //Definējam mainīgo, kas ir viena tabulas rinda
+                const row =  table.insertRow(rinda);
+                //console.log(rinda)
+
+                //Sadalam katru rindu gabalos uz katru komatu
+                const columns = rows[rinda].split(',')
+
+                //jauns for cikls, lai izveidu tabulas šūnas
+                for (let kolonna = 0; kolonna < columns.length; kolonna++) {
+                    const cell = row.insertCell(kolonna);
+
+                    cell.innerHTML = columns[kolonna]
+                }
+
+            }
+            
+
         }
 
     </script>
@@ -56,15 +68,8 @@
         <input type="file" onchange="readFile(event)" accept=".csv">
     </form>
     <!-- Tabula kurā tiks ievietota informācija no csv faila -->
-    <table>
-        <tr>
-            <!-- Izveidojam tabulas šūnu ar redzamu robežu -->
-            <td id="cell"></td>
-            <!-- Papildinam tabulu ar vēl 3 rindām -->
-            <td id="cell-1"></td>
-            <td id="cell-2"></td>
-            <td id="cell-3"></td>
-        </tr>
+    <table id="result">
+
     </table>
 </body>
 </html>
