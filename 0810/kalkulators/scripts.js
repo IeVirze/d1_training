@@ -1,0 +1,1 @@
+//Šeit būs kalkulatora funkcionalitāte

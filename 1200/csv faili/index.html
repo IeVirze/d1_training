@@ -50,7 +50,6 @@
                 //For cikla saturs ir šeit
                 //Definējam konstantu mainīgo, kurš izveido jaunu tabulas rindu starp <table> tagiem
                 const row = content.insertRow(rinda);
-
                 //Definējam mainīgo, ar kuru sadalam rindas pa kolonnām pēc komatiem
                 const columns = rows[rinda].split(',');
 
@@ -59,9 +58,8 @@
                         const cell = row.insertCell(kolonna);
                     //Izvadam šūnu saturu tabulā
                         cell.innerHTML = columns[kolonna]
+                        
                 }
-
-
             }
         }
     </script>
