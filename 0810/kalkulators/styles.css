@@ -1,3 +1,24 @@
 body {
     background-color: #bfd8ff;
+    text-align:center;
+}
+
+.button {
+    height: 50px;
+    width: 50px;
+    background-color: antiquewhite;
+    border: none;
+    color: blueviolet;
+    margin: 3px;
+}
+
+.button:hover {
+    background-color: #d3adf7;
+}
+
+.calculator {
+    background-color: azure;
+    width: 250px;
+    display: table;
+    padding:10px;
 }
