@@ -1,3 +1,14 @@
 body {
     background-color: rgb(110, 220, 20);
+    min-height: 100vh;
+    /*flex, grid, block, table*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Id ar # */
+#container {
+    background-color: bisque;
+    width: 300px;
 }
