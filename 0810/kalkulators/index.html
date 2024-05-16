@@ -11,25 +11,27 @@
     <!-- 17 pogas button tagi; 1 displejs div; 1 koda bloks kā konteiners kalkulatoram -->
     <div id="calculator" class="calculator">
         <!-- Displejs -->
-        <div id="displey" class="display">0</div>
-        <button id="clear" class="button" value="" onclick="">C</button>
-        <button id="one" class="button" value="1" onclick="">1</button>
-        <button id="two" class="button" value="2" onclick="">2</button>
-        <button id="three" class="button" value="3" onclick="">3</button>
-        <button id="four" class="button" value="4" onclick="">4</button>
-        <button id="five" class="button" value="5" onclick="">5</button>
-        <button id="six" class="button" value="6" onclick="">6</button>
-        <button id="seven" class="button" value="7" onclick="">7</button>
-        <button id="eight" class="button" value="8" onclick="">8</button>
-        <button id="nine" class="button" value="9" onclick="">9</button>
-        <button id="zero" class="button" value="0" onclick="">0</button>
-        <button id="dive" class="button" value="/" onclick="">/</button>
-        <button id="plus" class="button" value="+" onclick="">+</button>
-        <button id="minus" class="button" value="-" onclick="">-</button>
-        <button id="multi" class="button" value="*" onclick="">*</button>
-        <button id="equals" class="button" value="=" onclick="">=</button>
+        <div id="display" class="display"></div>
+        <button id="clear" class="button" value="" onclick="clear()">C</button>
+        <button id="one" class="button" value="1" onclick="takeValue(event)">1</button>
+        <button id="two" class="button" value="2" onclick="takeValue(event)">2</button>
+        <button id="three" class="button" value="3" onclick="takeValue(event)">3</button>
+        <button id="four" class="button" value="4" onclick="takeValue(event)">4</button>
+        <button id="five" class="button" value="5" onclick="takeValue(event)">5</button>
+        <button id="six" class="button" value="6" onclick="takeValue(event)">6</button>
+        <button id="seven" class="button" value="7" onclick="takeValue(event)">7</button>
+        <button id="eight" class="button" value="8" onclick="takeValue(event)">8</button>
+        <button id="nine" class="button" value="9" onclick="takeValue(event)">9</button>
+        <button id="zero" class="button" value="0" onclick="takeValue(event)">0</button>
+        <button id="dive" class="button" value="." onclick="takeValue(event)">.</button>
+        <button id="dive" class="button" value="/" onclick="takeValue(event)">/</button>
+        <button id="plus" class="button" value="+" onclick="takeValue(event)">+</button>
+        <button id="minus" class="button" value="-" onclick="takeValue(event)">-</button>
+        <button id="multi" class="button" value="*" onclick="takeValue(event)">*</button>
+        <button id="equals" class="button" value="=" onclick="showResult()">=</button>
 
     </div>
-    
+
+    <script src="scripts.js"></script>
 </body>
 </html>

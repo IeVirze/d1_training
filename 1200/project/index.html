@@ -12,27 +12,29 @@
     <!-- 1.bloks - konteiners, kas satur kalkulatoru -->
     <div id="container">
         <!-- Displejs -->
-        <div id="display">0</div>
+        <div id="display"></div>
         <!-- Visas pogas -->
-        <button id="clear" value="" onclick="">C</button>
-        <button class="num" value="1" onclick="">1</button>
-        <button class="num" value="2" onclick="">2</button>
-        <button class="num" value="3" onclick="">3</button>
-        <button class="num" value="4" onclick="">4</button>
-        <button class="num" value="5" onclick="">5</button>
-        <button class="num" value="6" onclick="">6</button>
-        <button class="num" value="7" onclick="">7</button>
-        <button class="num" value="8" onclick="">8</button>
-        <button class="num" value="9" onclick="">9</button>
-        <button class="num" value="0" onclick="">0</button>
-        <button class="ops" value="+" onclick="">+</button>
-        <button class="ops" value="-" onclick="">-</button>
-        <button class="ops" value="/" onclick="">/</button>
-        <button class="ops" value="*" onclick="">*</button>
-        <button id="result" value="=" onclick="">=</button>
-        <button id="decimal" value="." onclick="">.</button>
+        <button id="clear" value="" onclick="clear()">C</button>
+        <button class="num" value="1" onclick="getValue(event)">1</button>
+        <button class="num" value="2" onclick="getValue(event)">2</button>
+        <button class="num" value="3" onclick="getValue(event)">3</button>
+        <button class="num" value="4" onclick="getValue(event)">4</button>
+        <button class="num" value="5" onclick="getValue(event)">5</button>
+        <button class="num" value="6" onclick="getValue(event)">6</button>
+        <button class="num" value="7" onclick="getValue(event)">7</button>
+        <button class="num" value="8" onclick="getValue(event)">8</button>
+        <button class="num" value="9" onclick="getValue(event)">9</button>
+        <button class="num" value="0" onclick="getValue(event)">0</button>
+        <button class="ops" value="+" onclick="getValue(event)">+</button>
+        <button class="ops" value="-" onclick="getValue(event)">-</button>
+        <button class="ops" value="/" onclick="getValue(event)">/</button>
+        <button class="ops" value="*" onclick="getValue(event)">*</button>
+        <button id="result" value="=" onclick="result()">=</button>
+        <button id="decimal" value="." onclick="getValue(event)">.</button>
 
 
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
