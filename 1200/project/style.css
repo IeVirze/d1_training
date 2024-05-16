@@ -13,6 +13,7 @@ body {
     background-color: bisque;
     width: 300px;
     text-align: center;
+    border-radius: 10px;
 }
 
 /*buttons*/
@@ -23,6 +24,12 @@ button {
    height: 50px;
    border: none;
    margin: 5px;
+   cursor: pointer;
+   border-radius: 10px;
+}
+
+button:hover {
+    background-color: goldenrod;
 }
 
 .num {
@@ -39,8 +46,28 @@ button {
 
 #result {
     background-color: cornflowerblue;
+    width: 245px;
+}
+
+#result:hover {
+    background-color:darkcyan;
 }
 
 #decimal {
     background-color: darkgreen;
+}
+
+/*Izveiodjam redzamu displeju*/
+
+#display {
+    background-color: black;
+    color: whitesmoke;
+    height: 40px;
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
 }
