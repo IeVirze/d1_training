@@ -7,8 +7,13 @@ function getValue(event) {
     document.getElementById("display").innerHTML += num;
 }
 
-
 //funkcija clear(), kas notīra visas vērtības
+function clear() {
+
+}
 
 
 //funkcija result(), kas parāda aprēķināto rezultātu
+function result() {
+    
+}
