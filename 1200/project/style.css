@@ -1,17 +1,20 @@
 body {
-    background-color: rgb(110, 220, 20);
+    background-color: rgb(206, 199, 157);
     min-height: 100vh;
     /*flex, grid, block, table*/
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
     
 }
 
 /* Id ar # */
 #container {
     background-color: bisque;
-    width: 300px;
+    width: 250px;
     text-align: center;
     border-radius: 10px;
 }
@@ -20,8 +23,8 @@ body {
 
 button {
    color:bisque;
-   width: 50px;
-   height: 50px;
+   width: 40px;
+   height: 40px;
    border: none;
    margin: 5px;
    cursor: pointer;
@@ -46,7 +49,7 @@ button:hover {
 
 #result {
     background-color: cornflowerblue;
-    width: 245px;
+    width: 200px;
 }
 
 #result:hover {
@@ -62,7 +65,7 @@ button:hover {
 #display {
     background-color: black;
     color: whitesmoke;
-    height: 40px;
+    height: 80px;
     display: flex;
     justify-content:flex-end;
     align-items:center;
