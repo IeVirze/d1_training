@@ -3,9 +3,19 @@
 //funkcija getValue(event)
 function getValue(event) {
     const num = event.target.getAttribute("value")
+    const display = document.getElementById("display")
+    let text = display.innerHTML
     //Pārbauda vai konsolē tiek izvadīta pogas vērtība pareizi
-    console.log(num)
-    document.getElementById("display").innerHTML += num; 
+    //console.log(num)
+
+    //ja tiek sasniegts konkrēts skaitļu/darbības zīmju skaits teksta virknē, tad notīra rezultātu
+    if (text.length < 23 ) {
+        document.getElementById("display").innerHTML += num; 
+    } else {
+        clearInput()
+        console.log("Virkne par garu")
+    }
+    
 }
 
 //funkcija clear(), kas notīra visas vērtības
