@@ -7,14 +7,12 @@ body {
 }
 
 .calculator {
-    display: grid;
+    display: table;
     width: 250px;
     text-align: center;
     background-color: #F7EFFD;
     height: fit-content;
     align-items: center;
-    grid-template-columns: max-content max-content max-content max-content;
-    grid-template-rows: auto auto auto auto auto;
 }
 
 button {
@@ -41,15 +39,19 @@ button:hover, #equals:hover, #clear:hover {
     justify-content: center;
     align-items: center;
     display: flex;
+    overflow: hidden;
 }
 
+/*poga = */
 #equals {
     width: 100%;
     background-color: #28036B ;
     color: #F0EAF2;
 }
 
+/*poga C */
 #clear {
     background-color: #28036B ;
     color: #F0EAF2;
 }
+

@@ -12,7 +12,8 @@
     <div id="calculator" class="calculator">
         <!-- Displejs -->
         <div id="display" class="display"></div>
-        <button id="clear" class="button" value="" onclick="clear()">C</button>
+
+        <button id="clear" class="button" onclick="clearInput()">C</button>
         <button id="one" class="button" value="1" onclick="takeValue(event)">1</button>
         <button id="two" class="button" value="2" onclick="takeValue(event)">2</button>
         <button id="three" class="button" value="3" onclick="takeValue(event)">3</button>
@@ -29,7 +30,6 @@
         <button id="minus" class="button" value="-" onclick="takeValue(event)">-</button>
         <button id="multi" class="button" value="*" onclick="takeValue(event)">*</button>
         <button id="equals" class="button" value="=" onclick="showResult()">=</button>
-
     </div>
 
     <script src="scripts.js"></script>
